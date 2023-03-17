@@ -4,6 +4,9 @@ import IEEE from "./Assets/ieeewhite.png";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
+
+  // for screen width less than 400px change navmenu to react-burger-menu
+
   return (
     <div className="navbar">
       <img src={IEEE} alt="IEEE" className="ieee-logo" />

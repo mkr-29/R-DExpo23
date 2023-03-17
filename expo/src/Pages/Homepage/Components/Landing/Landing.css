@@ -2,6 +2,13 @@
     padding-top: 3rem;
     overflow: hidden;
     background: #111;
-    height: 93.5vh;
+    height: 200vh;
     z-index: -1;
+    display: flex;
+    justify-content: center;
+}
+.rnd-logo{
+    margin-top: 15rem;
+    width: 20rem;
+    z-index: 5;
 }

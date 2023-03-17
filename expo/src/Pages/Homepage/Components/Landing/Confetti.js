@@ -5,10 +5,17 @@ const ConfettiComponent = () => {
   return (
     <Confetti
       width={window.innerWidth-20}
-      height={window.innerHeight-1}
+      height={window.innerHeight+100}
       numberOfPieces={100}
       recycle={true}
-      colors={['#f44336', '#e91e63', '#9c27b0', '#673ab7', '#3f51b5', '#2196f3', '#03a9f4', '#00bcd4', '#009688', '#4CAF50', '#8BC34A', '#CDDC39', '#FFEB3B', '#FFC107', '#FF9800', '#FF5722', '#795548']}
+      gravity={0.05}
+      // wind={0.01}
+      drawShape={ctx => {
+        ctx.beginPath();
+        ctx.arc(0, 0, 7, 0, 2 * Math.PI);
+        ctx.fill();
+      }}
+      colors={['#03bc92']}
     />
   );
 };
