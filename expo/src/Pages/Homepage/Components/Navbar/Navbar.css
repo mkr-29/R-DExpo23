@@ -1,0 +1,65 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: .5rem;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+}
+.navbar img{
+    width: 120px;
+    margin-left: 10rem;
+}
+.navbar img:hover{
+    background-color: #03bc92;
+    animation: ieeelogo .5s ease-in-out;
+}
+.navbar-links a{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23.4595px;
+    text-decoration: none;
+    color: #03bc92;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-links a span{
+    height: 1px;
+    background-color: #fff;
+    width: 100%;
+}
+.navbar-links{
+    margin-right: 10rem;
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
+.navbar-links a:hover{
+    color: #7ca69d;
+}
+/* apply navlinks animation to span */
+.navbar-links a:hover span{
+    animation: navlinks 0.5s ease-in-out;
+}
+
+@keyframes navlinks {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+@keyframes ieeelogo {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}

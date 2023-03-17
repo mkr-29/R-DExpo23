@@ -1,0 +1,7 @@
+.landing{
+    padding-top: 3rem;
+    overflow: hidden;
+    background: #111;
+    height: 93.5vh;
+    z-index: -1;
+}
