@@ -1,14 +1,37 @@
-.landing{
-    padding-top: 3rem;
-    overflow: hidden;
-    background: #111;
-    height: 200vh;
-    z-index: -1;
-    display: flex;
-    justify-content: center;
+.landing {
+  padding-top: 3rem;
+  overflow: hidden;
+  background: #111;
+  height: 200vh;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
 }
-.rnd-logo{
-    margin-top: 15rem;
-    width: 20rem;
-    z-index: 5;
+.rnd-logo {
+  margin-top: 15rem;
+  width: 20rem;
+  z-index: 5;
+}
+.particle {
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 50%;
+  animation: fall 3s ease-in infinite;
+  height: 150vh;
+  z-index: 5;
+}
+
+@keyframes fall {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 200%, 0);
+  }
 }

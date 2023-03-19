@@ -1,8 +1,8 @@
 import React from "react";
-import ConfettiComponent from "./Confetti";
 import "./Landing.css";
 import RND from "./Assets/rndwhite3d.png";
 import { useEffect, useState } from "react";
+import Confetti from "./Particles";
 
 export default function Landing() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -19,7 +19,7 @@ export default function Landing() {
 
   return (
     <div className="landing">
-      <ConfettiComponent />
+      <Confetti/>      
       <div>
         <img
           src={RND}
