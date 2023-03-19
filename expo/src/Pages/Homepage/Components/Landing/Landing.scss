@@ -6,8 +6,15 @@
   z-index: -1;
   display: flex;
   justify-content: center;
+  // align-items: center;
   width: 100%;
   position: relative;
+  // flex-direction: column;
+}
+.landig-comps{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .rnd-logo {
   margin-top: 15rem;

@@ -8,7 +8,7 @@ const Time = () => {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
-  const deadline = "February, 24, 2023";
+  const deadline = "April, 21, 2023";
 
   const getTime = () => {
     const time = Date.parse(deadline) - Date.now();
@@ -29,22 +29,7 @@ const Time = () => {
     <div className="timer" role="timer">
       <div className="tcol-4">
         <div className="box">
-          <p id="day">{days < 10 ? "0" + days : days}<span className="text">days</span></p>
-        </div>
-      </div>
-      <div className="tcol-4">
-        <div className="box">
-          <p id="hour">{hours < 10 ? "0" + hours : hours}<span className="text">hrs</span></p>
-        </div>
-      </div>
-      <div className="tcol-4">
-        <div className="box">
-          <p id="minute">{minutes < 10 ? "0" + minutes : minutes}<span className="text">min</span></p>
-        </div>
-      </div>
-      <div className="tcol-4">
-        <div className="box">
-          <p id="second">{seconds < 10 ? "0" + seconds : seconds}<span className="text">sec</span></p>
+          <p id="day">{days < 10 ? "0" + days : days}<span className="text">Days to go...</span></p>
         </div>
       </div>
     </div>

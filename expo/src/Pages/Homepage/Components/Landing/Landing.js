@@ -3,6 +3,7 @@ import React from "react";
 import "./Landing.scss";
 import RND from "./Assets/rndwhite3d.png";
 import { useEffect, useState } from "react";
+import Time from "./Time";
 
 export default function Landing() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -22,7 +23,8 @@ export default function Landing() {
   circles.forEach((circle) => {
     circle.style.left = Math.random() * 95 + "%";
     circle.style.animationDelay = Math.random() * 10 + "s";
-    circle.style.animationDuration = Math.random() * 40 + "s";
+    // animation duration between 10 and 40s
+    circle.style.animationDuration = Math.random() * 30 + 10 + "s";
   });
 
   return (
@@ -82,7 +84,7 @@ export default function Landing() {
 
         </ul>
       </div>
-      <div>
+      <div className="landig-comps">
         <img
           src={RND}
           alt="RND EXPO"
@@ -94,6 +96,7 @@ export default function Landing() {
             })`,
           }}
         />
+      <Time/>
       </div>
     </div>
   );
