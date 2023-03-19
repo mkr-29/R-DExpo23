@@ -25,13 +25,6 @@ const Time = () => {
     return () => clearInterval(interval);
   }, []);
 
-//   change the text in id day if day is 0-1 to "R&D Expo has begun!"
-  if (days === 0) { 
-    document.getElementById("day").innerHTML = "R&D Expo has begun!";
-  }
-  else {
-    document.getElementById("day").innerHTML = days + " Days to go...";
-  }
 
   return (
     <div className="timer" role="timer">
