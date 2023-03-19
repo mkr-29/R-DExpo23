@@ -19,7 +19,31 @@ export default function Landing() {
 
   return (
     <div className="landing">
-      <Confetti/>      
+      <div class="area">
+        <ul class="circles">
+          <li></li>   {/*1*/}
+          <li></li>   {/*2*/} 
+          <li></li>  {/*3*/}
+          <li></li> {/*4*/}
+          <li></li> {/*5*/}
+          <li></li> {/*6*/}
+          <li></li> {/*7*/}
+          <li></li> {/*8*/}
+          <li></li>   {/*9*/}
+          <li></li>   {/*10*/}
+          <li></li>   {/*11*/}
+          <li></li>   {/*12*/}
+          <li></li>   {/*13*/}
+          <li></li>     {/*14*/}
+          <li></li>   {/*15*/}
+          <li></li>   {/*16*/}
+          <li></li>   {/*17*/}
+          <li></li>   {/*18*/}
+          <li></li>   {/*19*/}
+          <li></li>   {/*20*/}
+          <li></li>   {/*21*/}
+        </ul>
+      </div>
       <div>
         <img
           src={RND}
@@ -27,7 +51,7 @@ export default function Landing() {
           className="rnd-logo"
           style={{
             opacity: 1 - scrollPosition / window.innerHeight,
-            transform: `translateY(${scrollPosition * 0.5}px) scale(${
+            transform: `translateY(${scrollPosition * 0.8}px) scale(${
               1 + scrollPosition / (window.innerHeight * 2)
             })`,
           }}
