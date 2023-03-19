@@ -1,8 +1,8 @@
 import React from "react";
-import "./Landing.css";
+// import "./Landing.css";
+import "./Landing.scss";
 import RND from "./Assets/rndwhite3d.png";
 import { useEffect, useState } from "react";
-import Confetti from "./Particles";
 
 export default function Landing() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -16,6 +16,14 @@ export default function Landing() {
     const position = window.pageYOffset;
     setScrollPosition(position);
   };
+
+  // for each li of className circles give random left percentage less than 95% and random animation delay less than 10 and random animation duration less than 40
+  const circles = document.querySelectorAll(".circles li");
+  circles.forEach((circle) => {
+    circle.style.left = Math.random() * 95 + "%";
+    circle.style.animationDelay = Math.random() * 10 + "s";
+    circle.style.animationDuration = Math.random() * 40 + "s";
+  });
 
   return (
     <div className="landing">
@@ -42,6 +50,36 @@ export default function Landing() {
           <li></li>   {/*19*/}
           <li></li>   {/*20*/}
           <li></li>   {/*21*/}
+          <li></li>   {/*22*/}
+          <li></li>   {/*23*/}
+          <li></li>   {/*24*/}
+          <li></li>   {/*25*/}
+          <li></li>   {/*26*/}
+          <li></li>   {/*27*/}
+          <li></li>   {/*28*/}
+          <li></li>   {/*29*/}
+          <li></li>   {/*30*/}
+          <li></li>   {/*31*/}
+          <li></li>   {/*32*/}
+          <li></li>   {/*33*/}
+          <li></li>   {/*34*/}
+          <li></li>   {/*35*/}
+          <li></li>   {/*36*/}
+          <li></li>   {/*37*/}
+          <li></li>   {/*38*/}
+          <li></li>   {/*39*/}
+          <li></li>   {/*40*/}
+          <li></li>   {/*41*/}
+          <li></li>   {/*42*/}
+          <li></li>   {/*43*/}
+          <li></li>   {/*44*/}
+          <li></li>   {/*45*/}
+          <li></li>   {/*46*/}
+          <li></li>   {/*47*/}
+          <li></li>   {/*48*/}
+          <li></li>   {/*49*/}
+          <li></li>   {/*50*/}
+
         </ul>
       </div>
       <div>

@@ -1,0 +1,48 @@
+.timer {
+    display: inline-block;
+    padding: 70px 0px;
+    text-align: center;
+    background: linear-gradient(86.5deg, #129106 32.7%, #5ebf4e 95.44%);
+    width: 100%;
+  }
+  .tcol-4 {
+    width: 25%;
+    float: left;
+  }
+  /* .box {
+    padding: 10px;
+  } */
+  
+  .col-4:last-child .box {
+    border-right-color: transparent;
+  }
+  
+  .box p {
+    margin: 0;
+  }
+  
+  #day, #hour, #minute, #second, .text{
+      font-weight: 500;
+      font-size: 54px;
+      color: #FFFFFF;
+      margin: 0;
+      font-family: 'Poppins';
+      font-style: normal;
+      /* width: 10rem; */
+  }
+  .text{
+      margin-left: 1.5rem;
+  }
+  
+  @media screen and (max-width: 400px){
+      #day, #hour, #minute, #second,.text{
+          font-size: calc(10px + 2vmin);
+          padding: 1rem 0;
+      }
+      .text{
+        margin-left: 0.3rem;
+      }
+      .timer{
+        padding: 18px 0;
+      }
+  }
