@@ -42,3 +42,5 @@
         padding: 18px 0;
       }
   }
+
+  /* <p id="day">{days < 10 ? "0" + days : days}<span className="text">Days to go...</span></p> */
