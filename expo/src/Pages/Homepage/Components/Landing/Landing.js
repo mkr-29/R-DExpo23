@@ -98,13 +98,7 @@ export default function Landing() {
           }}
         />
         <Time />
-        <LNK
-          to="about-hp"
-          spy={true}
-          smooth={true}
-          offset={-100}
-          duration={1000}
-        >
+        <LNK className="about-landing-button" to="about" spy={true} smooth={true} offset={-100} duration={3000}>
           ABOUT
         </LNK>
       </div>

@@ -1,65 +1,140 @@
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    background-color: black;
-    padding: .5rem;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    z-index: 50;
+* {
+  margin: 0;
+  padding: 0;
 }
-.navbar img{
-    width: 120px;
-    margin-left: 10rem;
+.header {
+  position: fixed;
+  background: transparent;
+  z-index: 1000;
+  width: 100%;
 }
-.navbar img:hover{
-    background-color: #03bc92;
-    animation: ieeelogo .5s ease-in-out;
+.header-wrapper {
+  width: 80vw;
+  margin-left: 10%;
+  margin-right: 10%;
 }
-.navbar-links a{
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 23.4595px;
-    text-decoration: none;
-    color: #03bc92;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.header.active {
+  background: rgb(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
 }
-.navbar-links a span{
-    height: 1px;
-    background-color: #fff;
-    width: 100%;
+.header-logo{
+    width: 10rem;
 }
-.navbar-links{
-    margin-right: 10rem;
-    display: flex;
-    width: 40%;
-    justify-content: space-between;
+.header-logo-ieee {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  height: 100%;
+  z-index: 500;
 }
-.navbar-links a:hover{
-    color: #7ca69d;
+.nav-items ul {
+  position: relative;
+  display: flex;
+  height: 10vh;
+  gap: 3rem;
+  justify-content: flex-end;
+  align-items: center;
 }
-/* apply navlinks animation to span */
-.navbar-links a:hover span{
-    animation: navlinks 0.5s ease-in-out;
+.nav-items ul {
+  list-style: none;
+}
+.nav-items ul a {
+  color: rgb(189, 186, 186);
+  text-decoration: none;
+  cursor: pointer;
+}
+.nav-items ul li a:hover::after {
+  width: 100%;
+}
+.nav-items ul li a:hover {
+  color: #fff;
+  /* font-weight: 500; */
+}
+.nav-items ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: rgb(255, 255, 255);
+  transition: 0.3s;
+}
+.header-nav-lines,
+.header-nav-line {
+  display: none;
 }
 
-@keyframes navlinks {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100%;
-    }
+.menu {
+  display: none;
 }
-@keyframes ieeelogo {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 100;
-    }
+
+@media (max-width: 1100px) {
+  .nav-items ul {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: flex;
+    height: 7vh;
+    color: white;
+    align-items: center;
+    align-content: center;
+    justify-content: end;
+    z-index: 1000;
+  }
+
+  .header-logo-ieee img {
+    width: 78px;
+    height: 37px;
+    z-index: 100;
+  }
+
+  .header-wrapper .nav-items ul {
+    flex-direction: column;
+    position: fixed;
+    width: 100vw;
+    height: 0vh;
+    background: black;
+    top: 0;
+    left: 0;
+    justify-content: start;
+    overflow: hidden;
+  }
+
+  .header-wrapper.active .nav-items ul {
+    flex-direction: column;
+    padding-top: 8vh;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    transition: all 400ms ease;
+  }
+  .header-wrapper.active .header-nav-lines {
+    display: inline;
+    width: 50%;
+    height: 0px;
+    background-color: #919191;
+    background: #919191;
+    border: 0.2px solid #919191;
+    margin-left: 25%;
+    margin-right: 25%;
+    transition: all 400ms ease;
+  }
+
+  .header-wrapper.active .header-nav-line {
+    display: inline;
+    width: 100%;
+    height: 0px;
+    background-color: #919191;
+    background: #919191;
+    border: 0.5px solid #919191;
+    padding-left: 0;
+    padding-bottom: 0;
+    transition: all 400ms ease;
+  }
+  .header-wrapper.active .menu {
+    position: relative;
+    transition: all 400ms ease;
+  }
 }
