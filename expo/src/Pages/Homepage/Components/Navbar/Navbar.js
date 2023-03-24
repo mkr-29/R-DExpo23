@@ -59,16 +59,32 @@ function Navbar() {
             </li>
 
             <li>
-              <Link to="/events">EVENTS</Link>
+            <LNK
+               to="events"
+               spy={true}
+               smooth={true}
+               offset={-100}
+               duration={3000}
+               >
+                 EVENTS
+              </LNK>
             </li>
 
             <li>
-              <Link to="/page-under-construction">CERTIFICATION</Link>
+            <LNK
+               to="schedule"
+               spy={true}
+               smooth={true}
+               offset={-100}
+               duration={3000}
+               >
+                 SCHEDULE
+              </LNK>
             </li>
 
-            <li>
+            {/* <li>
               <Link to="/contact">CONTACT</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
