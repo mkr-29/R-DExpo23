@@ -1,16 +1,37 @@
 .landing {
   padding-top: 3rem;
   overflow: hidden;
-  background: #111;
   height: 200vh;
   z-index: -1;
   display: flex;
   justify-content: center;
-  // align-items: center;
   width: 100%;
   position: relative;
   z-index: 0;
-  // flex-direction: column;
+  background-image: url(./Assets/backgroundImage.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.landing::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(./Assets/backgroundImage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.landing::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 .landig-comps{
   display: flex;
@@ -24,7 +45,6 @@
   z-index: 5;
 }
 .area {
-  /* position: relative; */
   height: 150vh;
   overflow-x: hidden;
   z-index: 0;
